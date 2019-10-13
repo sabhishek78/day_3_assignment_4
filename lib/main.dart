@@ -70,7 +70,7 @@ class Home extends StatelessWidget {
                                                     Column(
 
                                                       children: <Widget>[
-                                                        Icon(Icons.kitchen,color: Colors.green,),
+                                                        Icon(Icons.check_circle_outline,color: Colors.green,),
                                                         SizedBox(height:5),
                                                         Text('PREP'),
                                                         SizedBox(height:10),
@@ -91,7 +91,7 @@ class Home extends StatelessWidget {
                                                     ),
                                                     Column(
                                                       children: <Widget>[
-                                                      Icon(Icons.restaurant,color: Colors.green,),
+                                                      Icon(Icons.person_outline,color: Colors.green,),
                                                       SizedBox(height:5),
                                                       Text('FEEDS'),
                                                       SizedBox(height:10),
@@ -121,6 +121,7 @@ class Home extends StatelessWidget {
           body: Row(
                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
+
                     Flexible(
                       flex: 1,
                       child: Container(
@@ -129,8 +130,9 @@ class Home extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
+                              SizedBox(height: 10,),
                           Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,),
-                              Text('Pavlova is a meringue-based dessert named after the Russian ballerine Anna Pavlova.Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream ',style: TextStyle(fontSize: 17),textAlign: TextAlign.center,),
+                              Text('Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream ',style: TextStyle(fontSize: 17),textAlign: TextAlign.center,),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
@@ -148,7 +150,7 @@ class Home extends StatelessWidget {
                                   Column(
 
                                     children: <Widget>[
-                                      Icon(Icons.kitchen,color: Colors.green,),
+                                      Icon(Icons.check_circle_outline,color: Colors.green,),
                                       SizedBox(height:5),
                                       Text('PREP'),
                                       SizedBox(height:10),
@@ -169,7 +171,7 @@ class Home extends StatelessWidget {
                                   ),
                                   Column(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: <Widget>[
-                                    Icon(Icons.restaurant,color: Colors.green,),
+                                    Icon(Icons.person_outline,color: Colors.green,),
                                     SizedBox(height:5),
                                     Text('FEEDS'),
                                     SizedBox(height:10),
