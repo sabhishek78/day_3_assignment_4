@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
@@ -14,196 +15,304 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     if (MediaQuery.of(context).orientation == Orientation.portrait){ //portrait
       return Scaffold(
-          backgroundColor: Colors.white,
-          body: SafeArea(
+          //backgroundColor: Colors.white,
+          body:  Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget> [
+                          Flexible(
+                              flex: 1,
+                              fit: FlexFit.tight,
+                              child: Image.asset('assets/recipie.jpg',fit: BoxFit.cover,)),
+                          SizedBox(height:20),
+                           Flexible(
+                             flex: 1,
+                             child: Container(
 
-              child: Container(
+                               padding: const EdgeInsets.all(5.0),
 
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.red, width: 5.0)),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        Expanded(
-                            flex:2,
-                            child: Image.asset('assets/recepie.jpg',fit: BoxFit.cover,)),
-                        Expanded(
-                          flex: 1,
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(height:05),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Row(
-                                  children: <Widget>[
-                                    Flexible(
-                                        fit:FlexFit.tight,
-                                        child: Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20))),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height:05),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Row(
-                                  children: <Widget>[Flexible(
-                                      fit:FlexFit.tight,
-                                      child: Text('Pavlova is a meringue-based dessert named after the Russian ballerine Anna Pavlova.Pavlova features a crisp crust and soft , light inside , topped with fruit and whipped cream ')),],
-                                ),
-                              ),
-                              SizedBox(height:05),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Row(
-                                  children: <Widget>[
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Text('170 Reviews'),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height:05),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Column(
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                 children: <Widget>[
+                                               Flexible(
+                                                  flex: 1,
+                                                   fit: FlexFit.tight,
+                                                   child: Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),textAlign: TextAlign.center,)),
+                                               //SizedBox(height:10),
+                                               Flexible(
 
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      children: <Widget>[
-                                        Icon(Icons.star),
-                                        Icon(Icons.star),
-                                        Icon(Icons.star),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      children: <Widget>[
-                                        Text('Prep'),
-                                        Text('Cook'),
-                                        Text('Feeds')
-                                      ],
-                                    ),
-                                    Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: <Widget>[
-                                      Text('25 min'),
-                                      Text('1 hr'),
-                                      Text('4-6')
-                                    ]),
+                                                flex: 3,
+                                                  fit: FlexFit.loose,
+                                                  child: Text('Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream.',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,)),
+                                                //SizedBox(height:20),
+                                                Flexible(
+                                               flex: 1,
+                                                fit: FlexFit.tight,
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    Icon(Icons.star),
+                                                    Icon(Icons.star),
+                                                    Icon(Icons.star),
+                                                    Icon(Icons.star),
+                                                    Icon(Icons.star),
+                                                    SizedBox(width:10),
+                                                    Text('170 Reviews'),],
+                                                ),
+                                              ),
+                                              //SizedBox(height:20),
+                                              Flexible(
+                                               flex: 2,
+                                               fit: FlexFit.tight,
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
+                                                  children: <Widget>[
+                                                    Column(
 
-                                  ],
-                                ),
-                              ),
+                                                      children: <Widget>[
+                                                        Icon(Icons.kitchen,color: Colors.green,),
+                                                        SizedBox(height:5),
+                                                        Text('PREP'),
+                                                        SizedBox(height:10),
+                                                        Text('25 min'),
+
+                                                      ],
+                                                    ),
+                                                    Column(
+
+                                                      children: <Widget>[
+                                                        Icon(Icons.timer,color: Colors.green,),
+                                                        SizedBox(height:5),
+                                                        Text('COOK'),
+                                                        SizedBox(height:10),
+                                                        Text('1 hr'),
+
+                                                      ],
+                                                    ),
+                                                    Column(
+                                                      children: <Widget>[
+                                                      Icon(Icons.restaurant,color: Colors.green,),
+                                                      SizedBox(height:5),
+                                                      Text('FEEDS'),
+                                                      SizedBox(height:10),
+                                                      Text('4-6')
+                                                    ]),
 
 
-
-                            ],
-                          ),
-                        ),
+                                                  ],
+                                                ),
+                                              ),
                           ]
+                               ),
+                             ),
+                           ),
+                        ],
+                          ),
+                        );
 
-                  )
 
-              )
-          )
 
-      );
 
     }
     else               //LANDSCAPE
       {
       return Scaffold(
-          backgroundColor: Colors.white,
-          body: SafeArea(
-
-              child: Container(
-
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.red, width: 5.0)),
-                  child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        Expanded(
-                          flex: 1,
-                          child: Column(
+         // backgroundColor: Colors.white,
+          body: Row(
+                 crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Flexible(
+                      flex: 1,
+                      child: Container(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              SizedBox(height:40),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Row(
-                                  children: <Widget>[
-                                    Flexible(
-                                        fit:FlexFit.tight,
-                                        child: Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20))),
-                                  ],
-                                ),
+                          Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,),
+                              Text('Pavlova is a meringue-based dessert named after the Russian ballerine Anna Pavlova.Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream ',style: TextStyle(fontSize: 17),textAlign: TextAlign.center,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(Icons.star),
+                                  Icon(Icons.star),
+                                  Icon(Icons.star),
+                                  Icon(Icons.star),
+                                  Icon(Icons.star),],
                               ),
-                              SizedBox(height:20),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Row(
-                                  children: <Widget>[Flexible(
-                                      fit:FlexFit.tight,
-                                      child: Text('Pavlova is a meringue-based dessert named after the Russian ballerine Anna Pavlova.Pavlova features a crisp crust and soft , light inside , topped with fruit and whipped cream ')),],
-                                ),
-                              ),
-                              SizedBox(height:20),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Row(
-                                  children: <Widget>[
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Icon(Icons.star),
-                                    Text('170 Reviews'),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height:20),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 2.0)),
-                                child: Column(
+                              Text('170 Reviews'),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      children: <Widget>[
-                                        Icon(Icons.star),
-                                        Icon(Icons.star),
-                                        Icon(Icons.star),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      children: <Widget>[
-                                        Text('Prep'),
-                                        Text('Cook'),
-                                        Text('Feeds')
-                                      ],
-                                    ),
-                                    Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: <Widget>[
+                                children: <Widget>[
+                                  Column(
+
+                                    children: <Widget>[
+                                      Icon(Icons.kitchen,color: Colors.green,),
+                                      SizedBox(height:5),
+                                      Text('PREP'),
+                                      SizedBox(height:10),
                                       Text('25 min'),
+
+                                    ],
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      Icon(Icons.timer,color: Colors.green,),
+                                      SizedBox(height:5),
+                                      Text('COOK'),
+                                      SizedBox(height:10),
                                       Text('1 hr'),
-                                      Text('4-6')
-                                    ]),
+
+                                    ],
+                                  ),
+                                  Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: <Widget>[
+                                    Icon(Icons.restaurant,color: Colors.green,),
+                                    SizedBox(height:5),
+                                    Text('FEEDS'),
+                                    SizedBox(height:10),
+                                    Text('4-6')
+                                  ]),
 
 
-                                  ],
+                                ],
+                              ),
+                            ]
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                        flex: 2,
+                        child: Image.asset('assets/recipie.jpg',fit: BoxFit.cover,))
+                  ]
+          )
+      );
+      }
+  }
+}
+
+
+
+
+                  /*
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(8.0,15.0,8.0,15.0),
+                        child: Container(
+
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.cyanAccent, width: 5.0)), //BLUE BORDER
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,//MAIN COLUMN
+                            children: <Widget>[
+                              SizedBox(height:5),
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.cyan[100],
+                                      border: Border.all(color: Colors.black, width: 2.0)),
+
+                                  child: Row(
+                                    children: <Widget>[
+                                      Flexible(
+                                          fit:FlexFit.tight,
+                                          child: Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,)),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height:10),
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.cyan[100],
+                                      border: Border.all(color: Colors.black, width: 2.0)),
+                                  child: Row(
+                                    children: <Widget>[Flexible(
+                                        fit:FlexFit.tight,
+                                        child: Text('Pavlova is a meringue-based dessert named after the Russian ballerine Anna Pavlova.Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream ',style: TextStyle(fontSize: 17),textAlign: TextAlign.center,)),],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height:10),
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.cyan[100],
+                                      border: Border.all(color: Colors.black, width: 2.0)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget> [Container(
+                                      child:
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(Icons.star),
+                                          Icon(Icons.star),
+                                          Icon(Icons.star),
+                                          Icon(Icons.star),
+                                          Icon(Icons.star),],
+                                      )
+                                    ),Container(
+                                      child: Text('170 Reviews'),
+                                            )
+                                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+
+
+                                 ] ),
+                                ),
+                              ),
+                              SizedBox(height:20),
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.cyan[100],
+                                      border: Border.all(color: Colors.black, width: 2.0)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                                    children: <Widget>[
+                                      Column(
+
+                                        children: <Widget>[
+                                          Icon(Icons.kitchen),
+                                          SizedBox(height:5),
+                                          Text('PREP'),
+                                          SizedBox(height:10),
+                                          Text('25 min'),
+
+                                        ],
+                                      ),
+                                      Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: <Widget>[
+                                          Icon(Icons.timer),
+                                          SizedBox(height:5),
+                                          Text('COOK'),
+                                          SizedBox(height:10),
+                                          Text('1 hr'),
+
+                                        ],
+                                      ),
+                                      Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: <Widget>[
+                                        Icon(Icons.restaurant),
+                                        SizedBox(height:5),
+                                        Text('FEEDS'),
+                                        SizedBox(height:10),
+                                        Text('4-6')
+                                      ]),
+
+
+                                    ],
+                                  ),
                                 ),
                               ),
 
@@ -212,14 +321,15 @@ class Home extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Expanded(
-                            flex:2,
-                            child: Image.asset('assets/recepie.jpg',fit: BoxFit.cover,))  ]
-
-                  )
+                      ),
+                    ),
+                    Expanded(
+                        flex:2,
+                        child: Image.asset('assets/recipie.jpg',fit: BoxFit.cover,))  ]
 
               )
-          )
+
+
 
       );
 // is landscape
@@ -228,3 +338,4 @@ class Home extends StatelessWidget {
 
   }
 }
+*/
