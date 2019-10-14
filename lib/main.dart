@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
 
                                                 flex: 3,
                                                   fit: FlexFit.loose,
-                                                  child: Text('Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream.',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,)),
+                                                  child: Text('Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,)),
                                                 //SizedBox(height:20),
                                                 Flexible(
                                                flex: 1,
@@ -132,17 +132,21 @@ class Home extends StatelessWidget {
                             children: <Widget>[
                               SizedBox(height: 10,),
                           Text('StrawBerry Pavlova',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,),
-                              Text('Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft,light inside,topped with fruit and whipped cream ',style: TextStyle(fontSize: 17),textAlign: TextAlign.center,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),],
-                              ),
-                              Text('170 Reviews'),
+                              Text('Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream ',style: TextStyle(fontSize: 17),textAlign: TextAlign.center,),
+                              Wrap(
+                                 alignment: WrapAlignment.center,
+
+                                  children: <Widget>[
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Text('170 Reviews'),
+                                  ],
+                                ),
+
+
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
